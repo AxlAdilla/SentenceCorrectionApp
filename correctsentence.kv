@@ -1,0 +1,39 @@
+<CustomBox>:
+    orientation:"vertical"
+    spacing:10
+    padding:10
+    hasil:Ghasil
+    
+    Label:
+        text:"Sentence Correction App"
+        font_size:48
+        
+    GridLayout:
+        cols:2
+        rows:1
+
+        Label:
+            text:"Masukan Kalimat"
+            font_size:24
+        TextInput:
+            font_size:24
+            id: rawSentence
+
+    Button:
+        text: "Koreksi"
+        font_size:24
+        on_press: root.do_MED(rawSentence.text) 
+        
+    GridLayout:
+        id:Ghasil
+        corrSentence:corrSentence
+        cols:2
+        rows:1
+
+        Label:
+            text:"Mungkin Maksud Anda"
+            font_size:24
+        TextInput:
+            font_size:24
+            readonly:True
+            id: corrSentence
